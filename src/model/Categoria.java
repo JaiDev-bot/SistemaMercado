@@ -36,4 +36,12 @@ public class Categoria {
         System.out.println(itens.get(codigo)+ "foi removido com sucesso");
         itens.remove(codigo);
     }
+
+    public ArrayList<Item> getItens() {
+        return itens;
+    }
+
+    public void setItens(ArrayList<Item> itens) {
+        this.itens = itens;
+    }
 }

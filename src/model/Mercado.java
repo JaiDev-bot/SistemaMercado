@@ -62,5 +62,39 @@ public class Mercado {
         System.out.println(itens.get(codigo)+ "foi removido com sucesso");
         itens.remove(codigo);
     }
+
+    public void apresentarCategoria() {
+       for (int i = 0; i < categorias.size(); i++) {
+           System.out.println("código: " + i + "Nome da categoria: " + categorias.get(i).getNome());
+       }
+    }
+
+    public void apresentarItens() {
+        for (int i = 0; i < itens.size(); i++) {
+            System.out.println("código: " + i + "Nome do Item: " + itens.get(i).getNome());
+        }
+    }
+
+    public void apresentarCategoriaPorCodigo(int codigo) {
+        for (int i = 0; i < categorias.size(); i++) {
+            if (codigo == 0){
+                for (int j = 0; j <categorias.get(0).getItens().size() ; j++) {
+                    System.out.println(categorias.get(0).getItens().get(j).getNome());
+                }
+                i= categorias.size();
+            }else if (codigo == 1){
+                for (int j = 0; j <categorias.get(1).getItens().size() ; j++) {
+                    System.out.println(categorias.get(1).getItens().get(j).getNome());
+                }
+                i= categorias.size();
+            }else if (codigo == 2){
+                for (int j = 0; j <categorias.get(2).getItens().size() ; j++) {
+                    System.out.println(categorias.get(2).getItens().get(j).getNome());
+                }
+            }
+
+        }
+    }
+
 }
 
