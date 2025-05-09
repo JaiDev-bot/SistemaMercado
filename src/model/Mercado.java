@@ -44,4 +44,23 @@ public class Mercado {
     public void setItens(ArrayList<Item> itens) {
         this.itens = itens;
     }
+
+    public void adicionarCategoria(Categoria categoria) {
+        categorias.add(categoria);
+    }
+
+    public void removerCategoria(int codigo) {
+        System.out.println(categorias.get(codigo)+ "foi removido com sucesso");
+        categorias.remove(codigo);
+    }
+
+    public void adicionarItem(Item item) {
+        itens.add(item);
+    }
+
+    public void removerItem(int codigo) {
+        System.out.println(itens.get(codigo)+ "foi removido com sucesso");
+        itens.remove(codigo);
+    }
 }
+
