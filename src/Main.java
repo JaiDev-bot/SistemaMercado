@@ -48,6 +48,11 @@ public class Main {
         jaassai.adicionarCategoria(limpeza);
         jaassai.adicionarCategoria(higieneCorporal);
 
+        System.out.println("Apresente todas as categorias cadastradas no mercado");
+        jaassai.apresentarCategoria();
+
+        System.out.println("Mostre todos os itens "  );
+        jaassai.apresentarItens();
 
         /*
         Mercado jaifood = new Mercado("Jaifood");

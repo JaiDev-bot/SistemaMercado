@@ -6,11 +6,11 @@ public class Mercado {
     private int codigo;
     private String nome;
     private ArrayList<Categoria> categorias;
-    private ArrayList<Item> itens;
+
 
     public Mercado(String nome) {
         this.categorias = new ArrayList<> ();
-        this.itens = new ArrayList<>();
+
     }
 
     public int getCodigo() {
@@ -37,13 +37,7 @@ public class Mercado {
         this.categorias = categorias;
     }
 
-    public ArrayList<Item> getItens() {
-        return itens;
-    }
 
-    public void setItens(ArrayList<Item> itens) {
-        this.itens = itens;
-    }
 
     public void adicionarCategoria(Categoria categoria) {
         categorias.add(categoria);
@@ -54,24 +48,20 @@ public class Mercado {
         categorias.remove(codigo);
     }
 
-    public void adicionarItem(Item item) {
-        itens.add(item);
-    }
-
-    public void removerItem(int codigo) {
-        System.out.println(itens.get(codigo)+ "foi removido com sucesso");
-        itens.remove(codigo);
-    }
 
     public void apresentarCategoria() {
        for (int i = 0; i < categorias.size(); i++) {
-           System.out.println("código: " + i + "Nome da categoria: " + categorias.get(i).getNome());
+           System.out.println("código: " + i + ", Nome da categoria: " + categorias.get(i).getNome());
        }
     }
 
     public void apresentarItens() {
-        for (int i = 0; i < itens.size(); i++) {
-            System.out.println("código: " + i + "Nome do Item: " + itens.get(i).getNome());
+        for (int i = 0; i < categorias.size(); i++) {
+            ArrayList<Item> itens = categorias.get(i).getItens();
+
+            for (int j = 0; j < itens.size(); j++) {
+                System.out.println("Nome: " + itens.get(j).getNome() +",  Preço:" + itens.get(j).getPreco() );
+            }
         }
     }
 
